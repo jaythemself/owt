@@ -1,0 +1,33 @@
+.Home {
+    /* landing page background */
+    min-height: 100dvh;
+    min-width: 100dvw;
+    background-image: url('../../images/jon-flobrant-city.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    /* scrolling disabled in body rn but if I change my mind:
+    display: flex;
+    flex-direction: column; */
+}
+
+.title {
+    /*OWT font type, size, color, placement*/
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 55px;
+    text-align: right;
+    padding-left: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+    width: 100%;
+    color:antiquewhite;    
+    
+}
+
+body {
+    /* constraints of the page as a whole */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}

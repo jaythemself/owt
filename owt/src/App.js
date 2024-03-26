@@ -1,20 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+//import './App.css';
+import * as Pages from './pages';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-
-    // eventually format will be:
-    /*<Router>
+    
+    <Router>
       <Routes>
-        <Route path="/home" element={<Pages.Home />} />
+        <Route path="/" element={<Pages.Home />} />
       </Routes>
-    </Router>*/
-    // will need to import components differently if it's needed for this project but that's it for pages
-    //will need react-router-dom library for BrowserRouter (Router, Routes, Route)
-    // will need import statement for page directory (import * as Pages from './pages';)
+    </Router>
 
-    //default setup below
+    // will need to import components differently if it's needed for this project but that's it for pages
+
+
+
+
+    /*default setup below
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -31,7 +34,9 @@ function App() {
         </a>
       </header>
     </div>
-    // end default setup
+    // end default setup */
+
+
   );
 }
 
