@@ -5,6 +5,8 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 import java.util.Objects;
@@ -13,16 +15,20 @@ import java.util.Objects;
 @Entity
 public class location extends abstractEntity {
 
+    @Getter
     @NotBlank(message = "Name of location is required.")
     private String locationName;
 
+    @Getter
     @NotBlank(message = "Street address of location is required.")
     @Size(min = 1, max = 99)
     private String locationStreet;
 
+    @Getter
     @NotBlank(message = "City of location is required.")
     private String locationCity;
 
+    @Getter
     @NotBlank(message = "State of location is required.")
     private String locationState;
 
@@ -30,19 +36,29 @@ public class location extends abstractEntity {
     private String locationZip;
 
 
-    public String getLocationName() {
-        return locationName;
-    }
+    //is there any conflict in using lombok @Setter as well? double check intended use
     public void setLocationName() {
         this.locationName = locationName;
     }
 
-    public String getLocationStreet() {
-        return locationStreet;
-    }
     public void setLocationStreet() {
         this.locationStreet = locationStreet;
     }
 
-    //getters and setters for city state and zip
+    public void setLocationCity() {
+        this.locationCity = locationCity;
+    }
+
+    public void setLocationState() {
+        this.locationState = locationState;
+    }
+
+    public String getLocationZip() {
+        return locationZip;
+    }
+    public void setLocationZip() {
+        this.locationZip = locationZip;
+    }
+
+    //overrides
 }
