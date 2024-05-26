@@ -55,4 +55,31 @@ public class locationController {
         return "redirect:/locations";
     }
 
+    @GetMapping("/update/{id}")
+    public String showUpdateLocationForm(@PathVariable int id, Model model) {
+        location location = locationRepository.findById(id).orElse(null);
+
+        if (location == null) {
+            return "redirect:/locations";
+        }
+
+        model.addAttribute("location", location);
+        return "locations/update";
+    }
+
+    @PostMapping("/update/{id}")
+    public String updateLocation(@PathVariable int id, @ModelAttribute @Valid location updatedLocation, Errors errors) {
+        if (errors.hasErrors()) {
+            return "/locations/update";
+        }
+
+        location existingLocation = locationRepository.findById(id).orElse(null);
+
+        if (existingLocation == null) {
+            return "redirect:/locations";
+        }
+
+        return "redirect:/locations";
+    }
+
 }
