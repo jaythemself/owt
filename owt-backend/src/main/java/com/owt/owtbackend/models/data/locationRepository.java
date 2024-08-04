@@ -1,6 +1,6 @@
 package com.owt.owtbackend.models.data;
 
-import  com.owt.owtbackend.models.location;
+import com.owt.owtbackend.models.location;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

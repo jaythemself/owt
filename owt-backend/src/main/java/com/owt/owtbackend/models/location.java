@@ -1,12 +1,13 @@
 package com.owt.owtbackend.models;
 
+
 import jakarta.persistence.Entity;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.Min;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,11 @@ import java.util.Objects;
 @Getter
 @Setter
 @Entity
+@NoArgsConstructor
 public class location extends abstractEntity {
+
+    @Id
+    private int id;
 
     @NotBlank(message = "Name of location is required.")
     private String locationName;
