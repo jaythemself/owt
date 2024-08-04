@@ -79,7 +79,15 @@ public class locationController {
             return "redirect:/locations";
         }
 
+        existingLocation.setLocationName(updatedLocation.getLocationName());
+        existingLocation.setLocationStreet(updatedLocation.getLocationStreet());
+        existingLocation.setLocationCity(updatedLocation.getLocationCity());
+        existingLocation.setLocationState(updatedLocation.getLocationState());
+        existingLocation.setLocationZip(updatedLocation.getLocationZip());
+        existingLocation.setHours(updatedLocation.getHours());
+        existingLocation.setUniqueComment(updatedLocation.getUniqueComment());
+
+        locationRepository.save(existingLocation);
         return "redirect:/locations";
     }
-
 }
