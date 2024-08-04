@@ -2,14 +2,12 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>Add Location</title>
+    <title>Update Location</title>
 </head>
 
-<!--Make up mind about referring to locations as businesses, sites, locations, venues, etc
-    and edit variable names for continuity on second pass. also maybe uniqueComment to userComment?-->
 <body>
-    <h1>Add Location</h1>
-    <form action='#' th:action="@/locations/add" th:object="${location}" method="post">
+    <h1>Update Location</h1>
+    <form action="#" th:action="@{/locations/update/{id}(id=${location.id})}" th:object="${location}" method="post">
         <label for="locationName">Business Name:</label>
         <input type="text" id="locationName" th:field="*{locationName}" /> <br/>
 
@@ -21,8 +19,9 @@
         <label for="uniqueComment">Additional Comments:</label>
         <textarea id="uniqueComment" th:field="*{uniqueComment}"></textarea> <br/>
 
-        <input type="submit" value="Add Location" />
+        <input type="submit" value="Update Location" />
     </form>
+
 </body>
 
 </html>
