@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
+<head>
+    <title>Add Location</title>
+</head>
+
+<!--Make up mind about referring to locations as businesses, sites, locations, venues, etc
+    and edit variable names for continuity on second pass. also maybe uniqueComment to userComment?-->
+<body>
+    <h1>Add Location</h1>
+    <form action='#' th:action="@/locations/add" th:object="${location}" method="post">
+        <label for="locationName">Business Name:</label>
+        <input type="text" id="locationName" th:field="*{locationName}" /> <br/>
+
+        <label for="locationStreet">Address:</label>
+        <input type="text" id="locationStreet" th:field="*{locationStreet}" /> <br/>
+
+        <!--continue for City, State, Zip, typeOfVenue, hours, uniqueComment-->
+        <input type="submit" value="Add Location" />
+    </form>
 </body>
+
 </html>
