@@ -45,27 +45,4 @@ public class location extends abstractEntity {
     @Size(max = 255, message = "Comment cannot exceed 255 characters.")
     private String uniqueComment;
 
-
-    //is there any conflict in using lombok @Setter as well? double check intended use
-    public void setLocationName() {
-        this.locationName = locationName;
-    }
-
-    public void setLocationStreet() {
-        this.locationStreet = locationStreet;
-    }
-
-    public void setLocationCity() {
-        this.locationCity = locationCity;
-    }
-
-    public void setLocationState() {
-        this.locationState = locationState;
-    }
-
-    public void setLocationZip() {
-        this.locationZip = locationZip;
-    }
-
-    //overrides
 }
